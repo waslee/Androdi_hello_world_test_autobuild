@@ -39,6 +39,8 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
+      - name: print JDK ver
+        run: java -version
       # # Run Tests Build
       # - name: Run gradle tests
       #   run: ./gradlew test
