@@ -59,8 +59,8 @@ jobs:
         name: Upload S3
         id: S3
         with:
-          aws_key_id:  'AKIAUJ6SNMZFYBIKVKUO'
-          aws_secret_access_key:  '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'
+          aws_key_id:  'AKIAUJ6SNMZFXA2T3SUK'
+          aws_secret_access_key:  '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'
           aws_bucket:  'qa-ireland-images'
           source_dir: './app/build/outputs/apk/release/'
           destination_dir: 'apk'
