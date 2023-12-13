@@ -52,3 +52,16 @@ jobs:
        # find build apk path
       - name: Find apk path
         run: find ./ -name *.apk
+
+      # upload to s3
+      - uses: shallwefootball/s3-upload-action@master
+        name: Upload S3
+        id: S3
+        with:
+          aws_key_id: 'AKIAUJ6SNMZFYBIKVKUO'
+          aws_secret_access_key: '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'
+          aws_bucket: 'qa-ireland-images'
+          aws-region: 'eu-west-1'
+          source_dir: 'apk'
+          file-path: "./app/build/outputs/apk/release/*.apk"
+
