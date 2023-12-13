@@ -3,6 +3,10 @@ name: Android CI
 env:
   # The name of the main module repository
   main_project_module: socrates
+  aki: 'AKIAUJ6SNMZFYBIKVKUO'
+  asak: 'wp2EBNI6EU8OG7y5fMCXgDL7rUDQPkn/Ra75UZmJ'
+  ar: eu-west-1
+  abk: qa-ireland-images
 on:
   # Triggers the workflow on push or pull request events but only for default and protected branches
   push:
@@ -13,6 +17,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+    
 jobs:
   build:
 
@@ -52,16 +57,16 @@ jobs:
        # find build apk path
       - name: Find apk path
         run: find ./ -name *.apk
-
+#aws_key_id', 'aws_secret_access_key', 'aws_bucket', 'source_dir', 'destination_dir', 'endpoint'
       # upload to s3
       - uses: shallwefootball/s3-upload-action@master
         name: Upload S3
         id: S3
         with:
-          aws_key_id: 'AKIAUJ6SNMZFYBIKVKUO'
-          aws_secret_access_key: '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'
-          aws_bucket: 'qa-ireland-images'
-          aws-region: 'eu-west-1'
+          aws_key_id:  ${aki}
+          aws_secret_access_key:  ${asak}
+          aws_bucket:  ${abk}
+          aws-region:  ${ar}
           # source_dir: 'apk'
           file-path: "./app/build/outputs/apk/release/*.apk"
 
