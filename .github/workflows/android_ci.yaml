@@ -67,6 +67,6 @@ jobs:
           aws_secret_access_key:  ${asak}
           aws_bucket:  ${abk}
           # aws-region:  ${ar}
-          source_dir: './app/build/outputs/apk/release/app-release-unsigned.apk'
+          source_dir: './app/build/outputs/apk/release/'
           # file-path: "./app/build/outputs/apk/release/*.apk"
 
