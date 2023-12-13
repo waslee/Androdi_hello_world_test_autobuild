@@ -65,7 +65,7 @@ jobs:
         with:
           aws_key_id:  ${aki}
           aws_secret_access_key:  ${asak}
-          aws_bucket:  ${abk}
+          aws_bucket:  qa-ireland-images
           # aws-region:  ${ar}
           source_dir: './app/build/outputs/apk/release/'
           # file-path: "./app/build/outputs/apk/release/*.apk"
