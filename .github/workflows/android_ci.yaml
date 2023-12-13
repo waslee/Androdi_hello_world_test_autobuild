@@ -62,6 +62,6 @@ jobs:
           aws_secret_access_key: 'wp2EBNI6EU8OG7y5fMCXgDL7rUDQPkn/Ra75UZmJ'
           aws_bucket: 'qa-ireland-images'
           aws-region: 'eu-west-1'
-          source_dir: 'apk'
+          # source_dir: 'apk'
           file-path: "./app/build/outputs/apk/release/*.apk"
 
